@@ -1,64 +1,5 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-/* Reset Code */
-body {
-    padding: 0;
-    margin: 0;
-    background: #FFF;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-body a,
-body button {
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-    text-decoration: none;
-	 cursor: pointer !important;
-}
-
-body a:hover,
-body button:hover {
-    text-decoration: none;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-	 cursor: pointer !important;
-}
-
 html {
     scroll-behavior: smooth;
-}
-
-body a:focus,
-a:hover {
-    text-decoration: none;
-}
-
-input[type="button"],
-input[type="submit"] {
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-}
-
-input[type="button"]:hover,
-input[type="submit"]:hover {
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
 }
 
 h1,
@@ -88,14 +29,6 @@ ol {
     padding: 0;
 }
 
-a:focus,
-a:hover {
-    text-decoration: none;
-    outline: none
-}
-
-/* //Reset Code */
-
 /* colors code */
 .text-bl {
     color: #343a40;
@@ -116,11 +49,6 @@ a:hover {
 .let {
     letter-spacing: 1px;
 }
-
-.theme-color {
-    color: #ff9900;
-}
-
 /* //colors code */
 
 /* bottom-to-top */
@@ -152,7 +80,6 @@ header {
 
 /* navigation */
 /* CSS Document */
-.toggle-2,
 .toggle,
 [id^=drop] {
     display: none;
@@ -646,14 +573,6 @@ h3.w3ls_pvt-title {
     font-weight: bold;
 }
 
-.w3ls_banner_txt h5 {
-    font-weight: 400;
-    color: #000;
-    font-size: 22px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
 
 .button-style {
     padding: 11px 20px;
