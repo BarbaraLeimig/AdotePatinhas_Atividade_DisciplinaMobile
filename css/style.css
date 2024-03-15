@@ -143,9 +143,11 @@ a.move-top {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 9;
+    background-color: #d36f0b;
+    
 }
 
 /* navigation */

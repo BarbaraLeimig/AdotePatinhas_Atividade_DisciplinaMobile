@@ -13,12 +13,14 @@
       addEventListener(
         "load",
         function () {
+          // Chama a função hideURLbar assim que a página é carregada.
           setTimeout(hideURLbar, 0);
         },
         false
       );
 
       function hideURLbar() {
+        // Move a janela de visualização para esconder a barra de URL do navegador.
         window.scrollTo(0, 1);
       }
     </script>
@@ -81,7 +83,7 @@
                   <li class="mx-lg-4 mx-md-3 my-md-0 my-2">
                     <!-- First Tier Drop Down -->
                     <label for="drop-2" class="toggle toogle-2"
-                      >Dropdown
+                      >Informações
                       <span class="fa fa-angle-down" aria-hidden="true"></span>
                     </label>
                     <a href="#"
