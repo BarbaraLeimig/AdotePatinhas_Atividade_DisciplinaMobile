@@ -101,7 +101,8 @@
     {
       "src": "AppIcons/120.png",
       "sizes": "120x120",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "AppIcons/128.png",
