@@ -1,10 +1,14 @@
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then((reg) => {
-                console.log('Registrando service worker', reg);
-            }) .catch((err) => {
-                console.log('Algo de errado aconteceu',err);
-            });
+let newWorker;
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js").then((reg) => {
+    reg.addEventListener("updatefound", () => {
+      newWorker = reg.installing;
     });
+  });
+  let refreshing;
+  navigator.serviceWorker.addEventListener("controllerchange", function () {
+    if (refreshing) return;
+    window.location.reload();
+    refreshing = true;
+  });
 }
