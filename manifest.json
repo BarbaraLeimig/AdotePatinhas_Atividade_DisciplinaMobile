@@ -5,7 +5,8 @@
     {
       "src": "AppIcons/16.png",
       "sizes": "16x16",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "AppIcons/20.png",
