@@ -22,14 +22,14 @@ self.addEventListener("install", (event) => {
           "./images/wh4.jpg",
           "./images/bg.jpg",
           "./images/move-top.png",
-          "./AppIcons/Assets.xcassets/128.png",
-          "./AppIcons/Assets.xcassets/144.png",
-          "./AppIcons/Assets.xcassets/152.png",
-          "./AppIcons/Assets.xcassets/167.png",
-          "./AppIcons/Assets.xcassets/180.png",
-          "./AppIcons/Assets.xcassets/196.png",
-          "./AppIcons/Assets.xcassets/256.png",
-          "./AppIcons/Assets.xcassets/512.png",
+          "./AppIcons/128.png",
+          "./AppIcons/144.png",
+          "./AppIcons/152.png",
+          "./AppIcons/167.png",
+          "./AppIcons/180.png",
+          "./AppIcons/192.png",
+          "./AppIcons/256.png",
+          "./AppIcons/512.png",
         ])
       )
   );
