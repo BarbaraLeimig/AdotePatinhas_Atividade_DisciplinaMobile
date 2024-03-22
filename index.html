@@ -41,7 +41,6 @@
 
   <link rel="manifest" href="./manifest.json">
 
-  <script type="text/javascript" src="./js/main.js"></script>
   <script type="text/javascript" src="./js/hideURLBar.js"></script>
 
   <!-- Custom-Files -->
@@ -331,6 +330,24 @@
   <!-- move top icon -->
   <a href="#home" class="move-top text-center"></a>
   <!-- //move top icon -->
+
+  <script>
+    let newWorker;
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js").then((reg) => {
+        reg.addEventListener("updatefound", () => {
+          newWorker = reg.installing;
+        });
+      });
+      let refreshing;
+      navigator.serviceWorker.addEventListener("controllerchange", function () {
+        if (refreshing) return;
+        window.location.reload();
+        refreshing = true;
+      });
+    }
+  </script>
+
 </body>
 
 </html>
