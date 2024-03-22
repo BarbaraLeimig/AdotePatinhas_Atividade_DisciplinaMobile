@@ -35,19 +35,18 @@ self.addEventListener("install", (event) => {
   );
 });
 
-self.addEventListener('message', function (event) {
-  if (event.data.action === 'skipWaiting') {
+self.addEventListener("message", (event) => {
+  if (event.data.action === "skipWaiting") {
     self.skipWaiting();
   }
 });
 
-self.addEventListener('fetch', function (event) {
-  //Atualizacao internet
+self.addEventListener("fetch", (event) => {
   event.respondWith(async function () {
     try {
       return await fetch(event.request);
     } catch (err) {
       return caches.match(event.request);
     }
-  }());
+  });
 });
