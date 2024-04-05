@@ -1,5 +1,5 @@
 function searchPatinhas(nome) {
-    const url = 'https://adote-patinhas.netlify.app/data/patinhas.json';
+    const url = 'https://adote-patinhas.netlify.app/data/patinhas.json/?t=' + nome;
     
     // Realiza uma solicitação AJAX para obter os dados do JSON
     const xhr = new XMLHttpRequest();
