@@ -120,15 +120,29 @@
                 gente e preencha nosso formulário sinalizando seu interesse pela adoção.
                 Adotar é sinônimo de amor e esperança!
             </p>
-            
+
             <div class="col-md-12 agileinfo_mail_grid_right mt-md-0 mt-5">
                 <form action="#" method="get">
-                  <div class="form-group">
-                    <input type="text" name="Name" class="form-control" placeholder="Insira o nome da Patinha" required="" />
-                  </div>
-                  <button type="submit" class="btn">Buscar</button>
+                    <div class="form-group">
+                        <input id="namePatinha" type="text" class="form-control" placeholder="Insira o nome da Patinha"
+                            required="" />
+                    </div>
+                    <button type="submit" class="btn"
+                        onclick="searchPatinhas(document.getElementById('namePatinha').value)">Buscar</button>
                 </form>
-              </div>
+            </div>
+        </div>
+    </div>
+    <div class="what py-5">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="col-sm-12">
+                <h3 id='nome'></h3>
+                <p id='idade'></p>
+                <p id='raca'></p>
+                <p id='sexo'></p>
+                <p id='cor'></p>
+                <p id='statusAdocao'></p>
+            </div>
         </div>
     </div>
     <!-- //search -->
@@ -189,6 +203,9 @@
     <!-- move top icon -->
     <a href="#home" class="move-top text-center"></a>
     <!-- //move top icon -->
+
+    <script type="text/javascript" src="js/patinhasAPI.js"></script>
+
 </body>
 
 </html>

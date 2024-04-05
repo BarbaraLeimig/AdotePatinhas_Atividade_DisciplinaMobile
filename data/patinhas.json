@@ -1,0 +1,68 @@
+{
+    "patinhas": [
+        {
+            "nome": "Princesa",
+            "idade": 4,
+            "raca": "cão SRD",
+            "sexo": "fêmea",
+            "cor": "mesclado",
+            "statusAdocao": "em processo de adoção"
+        },
+        {
+            "nome": "Mel",
+            "idade": 1,
+            "raca": "gato SRD",
+            "sexo": "fêmea",
+            "cor": "laranja e branco",
+            "statusAdocao": "disponível"
+        },
+        {
+            "nome": "Paco",
+            "idade": 6,
+            "raca": "cão SRD",
+            "sexo": "macho",
+            "cor": "branco",
+            "statusAdocao": "adotado"
+        },
+        {
+            "nome": "Michellangelo",
+            "idade": 0.6,
+            "raca": "cão SRD",
+            "sexo": "macho",
+            "cor": "laranja e preto",
+            "statusAdocao": "disponível"
+        },
+        {
+            "nome": "Nora",
+            "idade": 0.5,
+            "raca": "gato Europeu Comum",
+            "sexo": "fêmea",
+            "cor": "amarelo, cinza, preto",
+            "statusAdocao": "em processo de adoção"
+        },
+        {
+            "nome": "Gray",
+            "idade": 4,
+            "raca": "gato SRD",
+            "sexo": "macho",
+            "cor": "cinza",
+            "statusAdocao": "disponível"
+        },
+        {
+            "nome": "Luna",
+            "idade": 3,
+            "raca": "cão SRD",
+            "sexo": "fêmea",
+            "cor": "amarelo",
+            "statusAdocao": "disponível"
+        },
+        {
+            "nome": "Faisca",
+            "idade": 2,
+            "raca": "cão Pastor Alemão",
+            "sexo": "macho",
+            "cor": "amarelo e preto",
+            "statusAdocao": "em processo de adoção"
+        }
+    ]
+}
