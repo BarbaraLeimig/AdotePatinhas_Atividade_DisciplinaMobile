@@ -1,4 +1,4 @@
-function searchPatinhas(nome) {
+/* function searchPatinhas(nome) {
     const url = 'https://adote-patinhas.netlify.app/data/patinhas.json/?t=' + nome;
     
     // Realiza uma solicitação AJAX para obter os dados do JSON
@@ -21,27 +21,10 @@ function searchPatinhas(nome) {
       }
     };
     xhr.send();
-  }
+  } */
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* function searchPatinha() {
+function searchPatinha(nome) {
   $('#nome').empty();
   $('#idade').empty();
   $('#raca').empty();
@@ -52,14 +35,15 @@ function searchPatinhas(nome) {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://adote-patinhas.netlify.app/data/patinhas.json",
+    "url": "https://adote-patinhas.netlify.app/data/patinhas.json?t=" + nome,
     "method": "GET"
   };
 
   $.ajax(settings).done(function (response) {
     console.log(response);
-    $('')
+    $('#nome').append(response.Nome);
+    $('#idade').append(response.Idade);
+    $('#raca').append(response.Raca);
   });
 
 }
- */
