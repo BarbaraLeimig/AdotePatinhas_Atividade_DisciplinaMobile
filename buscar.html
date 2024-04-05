@@ -46,6 +46,22 @@
     <link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all" />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Hotjar Tracking Code for https://pedantic-clarke-ebf939.netlify.app/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 2434567, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
     <!-- //Custom-Files -->
 
     <!-- Web-Fonts -->
@@ -122,28 +138,31 @@
             </p>
 
             <div class="col-md-12 agileinfo_mail_grid_right mt-md-0 mt-5">
-                <form method="get">
+                <form>
                     <div class="form-group">
                         <input id="patinhas" type="text" class="form-control" placeholder="Insira o nome da Patinha"
                             required="" />
                     </div>
-                    <button type="submit" class="btn"
-                        onclick="searchPatinhas(document.getElementById('patinhas').value)">Buscar</button>
+                    <a class="btn btn-primary"
+                        onclick="searchPatinhas(document.getElementById('patinhas').value)">Buscar</a>
                 </form>
             </div>
         </div>
     </div>
-    <div class="what py-5">
-        <div class="col-sm-12">
-            <h3 id='nome'></h3>
-            <p id='idade'></p>
-            <p id='raca'></p>
-            <p id='sexo'></p>
-            <p id='cor'></p>
-            <p id='statusAdocao'></p>
-        </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 id='nome'></h3>
+                <p id='idade'></p>
+                <p id='raca'></p>
+                <p id='sexo'></p>
+                <p id='cor'></p>
+                <p id='statusAdocao'></p>
+            </div>
+        </div>
     </div>
+    <br />
     <!-- //search -->
 
     <!-- footer -->

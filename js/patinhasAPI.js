@@ -1,49 +1,48 @@
-/* function searchPatinhas(nome) {
-    const url = 'https://adote-patinhas.netlify.app/data/patinhas.json/?t=' + nome;
-    
-    // Realiza uma solicitação AJAX para obter os dados do JSON
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        const data = JSON.parse(xhr.responseText);
-        const patinhas = data.patinhas;
-  
-        // Procura pela patinha com o nome fornecido
-        const resultado = patinhas.find(patinha => patinha.nome === nome);
-  
-        // Exibe o resultado
-        if (resultado) {
-          console.log('Patinha encontrada:', resultado);
-        } else {
-          console.log('Patinha não encontrada');
-        }
-      }
-    };
-    xhr.send();
-  } */
-  
-
-function searchPatinha(nome) {
-  $('#nome').empty();
-  $('#idade').empty();
-  $('#raca').empty();
-  $('#sexo').empty();
-  $('#cor').empty();
-  $('#statusAdocao').empty();
+function searchPatinhas(nome) {
+  $("#nome").empty();
+  $("#idade").empty();
+  $("#raca").empty();
+  $("#sexo").empty();
+  $("#cor").empty();
+  $("#statusAdocao").empty();
 
   var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://adote-patinhas.netlify.app/data/patinhas.json?t=" + nome,
-    "method": "GET"
+    async: true,
+    crossDomain: true,
+    url: "https://verdant-dusk-cde2e1.netlify.app/patinhas.json",
+    method: "GET",
   };
 
-  $.ajax(settings).done(function (response) {
+  $.ajax(settings)
+    .done(function (response) {
+      var patinhas = response.patinhas;
+      var found = false;
+      for (var i = 0; i < patinhas.length; i++) {
+        if (patinhas[i].nome.toLowerCase() === nome.toLowerCase()) {
+          found = true;
+          $("#nome").text("Nome: " + patinhas[i].nome);
+          $("#idade").text("Idade: " + patinhas[i].idade);
+          $("#raca").text("Raça: " + patinhas[i].raca);
+          $("#sexo").text("Sexo: " + patinhas[i].sexo);
+          $("#cor").text("Cor: " + patinhas[i].cor);
+          $("#statusAdocao").text(
+            "Status de Adoção: " + patinhas[i].statusAdocao
+          );
+          break;
+        }
+      }
+      if (!found) {
+        alert("Patinha não encontrada.");
+      }
+    })
+    .fail(function () {
+      alert("Erro ao carregar dados.");
+    });
+}
+
+/* $.ajax(settings).done(function (response) {
     console.log(response);
     $('#nome').append(response.Nome);
     $('#idade').append(response.Idade);
     $('#raca').append(response.Raca);
-  });
-
-}
+  }); */
