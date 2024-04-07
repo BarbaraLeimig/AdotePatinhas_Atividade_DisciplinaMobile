@@ -12,7 +12,6 @@ self.addEventListener('install', event => {
         "./css/css_slider.css",
         "./css/font-awesome.min.css",
         "./css/style.css",
-        "./js/hideURLBar.js",
         "./images/1.jpg",
         "./images/about2.jpg",
         "./images/wh1.jpg",
