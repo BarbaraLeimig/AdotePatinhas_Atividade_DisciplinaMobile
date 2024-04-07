@@ -37,20 +37,10 @@ const createDescriptionEntry = ({label, value}) => {
   parentElement.appendChild(descriptionValue);
 }
 
-const fillDogDescrption = ({bred_for: bredFor, bred_group: bredGroup, name, temperament, life_span: lifeSpan, origin, height, weight}) => {
+const fillDogDescrption = ({name, temperament, life_span: lifeSpan, origin, height, weight}) => {
   createDescriptionEntry({
-    label: "Name",
+    label: "Nome",
     value: name
-  })
-
-  createDescriptionEntry({
-    label: "Bred for",
-    value: bredFor
-  })
-
-  createDescriptionEntry({
-    label: "Bred group",
-    value: bredGroup
   })
 
   createDescriptionEntry({
@@ -59,29 +49,29 @@ const fillDogDescrption = ({bred_for: bredFor, bred_group: bredGroup, name, temp
   })
 
   createDescriptionEntry({
-    label: "Life span",
+    label: "Tempo de vida",
     value: lifeSpan
   })
 
   createDescriptionEntry({
-    label: "Origin",
+    label: "Origem",
     value: origin
   })
 
   createDescriptionEntry({
-    label: "Height [cm]",
+    label: "Altura [cm]",
     value: height.metric
   })
 
   createDescriptionEntry({
-    label: "Weight [kg]",
+    label: "Peso [kg]",
     value: weight.metric
   })
 }
 
 const getDogByBreed = async (breedId) => {
 
-  const [ data ] = await fetch(`${BASE_API_URL}/images/search?breed_ids=${breedId}&api_key=${API_KEY}`).then((data) => data.json());
+  const [ data ] = await fetch(`${BASE_API_URL}/images/search?include_breed=1breed_ids=${breedId}&api_key=${API_KEY}`).then((data) => data.json());
   const {url: imageUrl, breeds} = data;
   fillDogImage(imageUrl);
   fillDogDescrption(breeds[0]);
