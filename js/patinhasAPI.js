@@ -71,7 +71,7 @@ const fillDogDescrption = ({name, temperament, life_span: lifeSpan, origin, heig
 
 const getDogByBreed = async (breedId) => {
 
-  const [ data ] = await fetch(`${BASE_API_URL}/images/search?include_breed=1breed_ids=${breedId}&api_key=${API_KEY}`).then((data) => data.json());
+  const [ data ] = await fetch(`${BASE_API_URL}/images/search?include_breed=1&breed_ids=${breedId}&api_key=${API_KEY}`).then((data) => data.json());
   const {url: imageUrl, breeds} = data;
   fillDogImage(imageUrl);
   fillDogDescrption(breeds[0]);
