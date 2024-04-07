@@ -50,18 +50,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <!-- Hotjar Tracking Code for https://pedantic-clarke-ebf939.netlify.app/ -->
-    <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 2434567, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
     <!-- //Custom-Files -->
 
     <!-- Web-Fonts -->
@@ -105,7 +93,7 @@
                                     <a href="nossasPatinhas.html">Nossas Patinhas</a>
                                 </li>
                                 <li>
-                                    <a href="buscar.html" class="active">Buscar Patinha</a>
+                                    <a href="curiosidades.html" class="active">Buscar Patinha</a>
                                 </li>
                                 <li>
                                     <a href="contato.html">Fale com a gente</a>
@@ -128,41 +116,23 @@
     <div class="what py-5">
         <div class="container py-xl-5 py-lg-3">
             <h3 class="title-w3 mb-sm-4 mb-3 text-bl text-center font-weight-bold">
-                Busque sua Patinha
+                Curiosidades
             </h3>
             <p class="mx-auto wstyles text-center mb-sm-5 mb-4">
-                Aqui você pode buscar a Patinha que tocou seu coração e encontrar informaçãos como nome, idade, raça,
-                cor, sexo, se está ou não disponível para adoção. Entre em <a href="contato.html">contato</a> com a
-                gente e preencha nosso formulário sinalizando seu interesse pela adoção.
-                Adotar é sinônimo de amor e esperança!
+                Escolha abaixo a raça de uma Patinha e saiba mais sobre ela!
             </p>
 
             <div class="col-md-12 agileinfo_mail_grid_right mt-md-0 mt-5">
-                <form>
-                    <div class="form-group">
-                        <input id="patinhas" type="text" class="form-control" placeholder="Insira o nome da Patinha"
-                            required="" />
-                    </div>
-                    <a class="btn btn-primary"
-                        onclick="searchPatinhas(document.getElementById('patinhas').value)">Buscar</a>
-                </form>
-            </div>
-        </div>
-    </div>
+                <select id="breed-selector" class="breed-select" onchange="changeDog(this)">
+                    <option>Selecione a raça da Patinha</option>
+                </select>
+                <img id="dog-image" src="" alt="dog">
+                <dl id="dog-description">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h3 id='nome'></h3>
-                <p id='idade'></p>
-                <p id='raca'></p>
-                <p id='sexo'></p>
-                <p id='cor'></p>
-                <p id='statusAdocao'></p>
+                </dl>
             </div>
         </div>
-    </div>
-    <br />
+    </div>    
     <!-- //search -->
 
     <!-- footer -->
