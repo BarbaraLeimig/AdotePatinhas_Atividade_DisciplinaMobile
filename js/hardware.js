@@ -8,6 +8,8 @@ function vibratePattern() {
   navigator.vibrate([100, 200, 200, 200, 500]);
 }
 
+// Recurso de hardware para gravar audio, localizado no Fale com a gente
+
 function getUserMedia(constraints) {
   // if Promise-based API is available, use it
   if (navigator.mediaDevices) {
