@@ -1,4 +1,19 @@
-const registerServiceWorker = async () => {
+let newWorker;
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./service-worker.js").then((reg) => {
+    reg.addEventListener("updatefound", () => {
+      newWorker = reg.installing;
+    });
+  });
+  let refreshing;
+  navigator.serviceWorker.addEventListener("controllerchange", function () {
+    if (refreshing) return;
+    window.location.reload();
+    refreshing = true;
+  });
+}
+
+/* const registerServiceWorker = async () => {
   if ("serviceWorker" in navigator) {
     try {
       const registration = await navigator.serviceWorker.register(
@@ -20,4 +35,4 @@ const registerServiceWorker = async () => {
   }
 };
 
-registerServiceWorker();
+registerServiceWorker(); */
